@@ -1,0 +1,230 @@
+@charset "UTF8";
+
+@media screen and (min-width:769px) and (max-width:992px){
+    *{
+        margin: 0px;
+        padding: 0px;
+     }
+
+    body{
+        
+        background-color: rgb(255, 255, 255);
+        
+    }
+
+    div.burguer {
+      display:none;
+    }
+    
+    header{
+        text-align: right;        
+        background-color:white;
+        display: block;
+        padding: 15px;
+        margin:auto;
+        width: 90vw;
+    }
+    span#burguer {
+        display: none;
+        
+    }
+
+    menu{
+        
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block;
+        padding:10px;
+        margin-right: 30px;
+    }
+
+    menu > ul > li > a{
+      
+        display: block;
+        background-color: white;
+        color:rgb(58, 11, 58);
+        border:none;        
+        transition: 0.5s ease-in-out;
+    }
+
+    menu > ul > li > a:hover{
+      color: white;
+      border: 1px solid black;
+      background-color: rgb(58, 11, 58);
+    }
+
+    section{
+        display: block;
+        margin:auto;
+        max-width: 90%;
+    }
+
+    section > h1{
+        float: right;
+        display: inline-block;
+        font-weight: bolder;
+        padding:20px;   
+        margin-right: 100px;
+     }
+
+     section > picture{
+        margin-left: 80px;
+        display: inline-block;   
+        float: left;
+        text-align: center;
+        padding:20px;
+     }
+    
+     section > picture > img{
+        border:2px solid black;
+        border-radius: 50%;
+        cursor: pointer;
+     }    
+
+     section > p{
+        display: inline-block;
+        width: 500px;
+        padding:20px;
+        font-weight: normal;
+        font-size: 1.5em;
+        text-indent: 30px;;
+     }
+    
+     section  input{
+        
+       cursor: pointer;
+        padding:20px;
+        display: block;    
+        margin:auto;
+        border-radius: 8px;
+        font-size:1.2em;
+        font-weight: bold;
+     }
+    
+     aside{
+      max-width: 86%;
+      margin: auto;
+     }
+
+     aside > h2{
+        text-align: left;
+        color: rgb(247, 244, 244);
+        font-size: 2em;
+        padding: 25px;
+     }
+     
+     article  figcaption{
+      font-size: 30px;
+     }
+
+     article{
+        border-radius:0px 0px 10px 10px;
+        text-align: center;
+        background-color: rgb(58, 11, 58);
+        max-width: 90%;
+        margin: auto;
+        height: 50vh;
+        margin-bottom: 10px;
+        
+     }
+
+     aside div.box > img{
+      width: 150px;
+    }
+
+    .slider{
+   
+      width: 450px; /*tem que ser do tamanho da img*/
+     height: 300px;
+     margin: 0 auto;
+     overflow: hidden;
+     
+   }
+    .manual-navigation{
+      position: absolute;
+      width: 450px; /*tem que ser do tamanho do slider*/
+      margin-top: 310px;
+      z-index: 99;
+      display: flex;/*altura do radios manual*/
+      justify-content: center;
+    }
+   
+    .manual-btn{
+      border: 2px solid white;
+      padding: 5px;
+      border-radius: 10px;
+      transition: 1s ease-in-out;
+    }
+   
+    .manual-btn:not(:last-child){
+     margin-right: 30px;
+   }
+   
+   .manual-btn:hover{
+     background-color: white;
+   }
+   
+    #radio1:checked ~ .first{
+      margin-left: 0;
+    }
+   
+    #radio2:checked ~ .first{
+      margin-left: -25%;
+    }
+   
+    #radio3:checked ~ .first{
+      margin-left:-50%;
+    }
+   
+    #radio4:checked ~ .first{
+      margin-left:-75%;
+    }
+   
+    #radio5:checked ~ .first{
+      margin-left:-100%;
+    }
+   
+    #radio6:checked ~ .first{
+      margin-left:-125%;
+    }
+   
+   .navigation-auto div{
+     border: 2px solid white;
+      padding: 5px;
+      border-radius: 10px;
+      transition: 1s ease-in-out; /*transiçao das imagens*/
+   }
+   
+   .navigation-auto{
+      position: absolute;
+      width: 450px;;/*tem que ser do tamanho do slider*/
+      margin-top: 310px;/*tem quer ser alinhados com radios manual*/
+      display: flex;
+      z-index: 1;
+      justify-content: center;
+   }
+   
+   .navigation-auto div:not(:last-child){
+      margin-right: 30px;
+    }
+    article > div.slider > div.slides > div.slide-first > img{
+      width: 450px;
+    }
+   
+    
+    article > div.slider > div.slides > div.slide > a > img{
+      
+      width: 450px;
+    }
+   
+    article > div.slider > div.slides > div.slide > img{
+      width: 450px;
+    }
+    
+}
+
+
+
+
