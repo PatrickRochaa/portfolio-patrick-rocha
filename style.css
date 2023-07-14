@@ -1,111 +1,141 @@
 @charset "UTF8";
 
 *{
-    margin: 0px;
-    padding: 0px;
- }
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
 
- body{
-    background-color: white;
-    overflow-x: hidden;
+body{
+  width: 100vw;
+  margin: auto;
+  overflow-x: hidden;
 }
 
 html{
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
- main{
-    padding-top: -4px;
-    background-color: white;
-    width: 100vw;
-    border-radius:0px 0px 10px 10px;
-    margin:auto;
- }
-
 header{
-    background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 span#burguer{
-   display:block;
-   text-align: right;
-   background-color: black;
-   color:white;
-   font-size:2em;
-   padding:10px;
-   cursor:pointer;
+  display:block;
+  text-align: end;
+  background-color: black;
+  color:white;
+  font-size:2rem;
+  padding: 10px;
+  cursor:pointer;
 }
 
 span#burguer:hover {
-   background-color: white;
-   color: black;
-   font-size:2.3em;
-   font-weight: bolder;
+  background-color: white;
+  color: black;
+  font-size:2.3em;
+  font-weight: bolder;
 }
 
 menu{
-    display: none;
+  display: none;
 }
+
+
 
 menu > ul{
 
-    list-style-type: none;
-    
+  list-style-type: none;
+  
 }
 
 menu > ul > li > a {
-
-    width: 100%;
-    display:block;
-    margin:auto;
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    text-align: center;
-    background-color: rgb(58, 11, 58);
-    border: 1px solid rgb(122, 118, 118); 
-    transition: 0.5s ease-in-out;
-   
+  
+  display:block;
+  margin:auto;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgb(58, 11, 58);
+  border: 1px solid rgb(122, 118, 118); 
+  transition: 0.5s ease-in-out;
+ 
 }
-
 
 menu > ul > li > a:hover{
-    background-color: rgb(247, 244, 244);
-    color:rgb(58, 11, 58);
+  background-color: rgb(247, 244, 244);
+  color:rgb(58, 11, 58);
+}
+
+section{
+    
+  padding-bottom: 10px;
+  background-color: white;
+}
+
+section > h1{
+  
+  display: block;
+  font-weight: bolder;
+  padding:20px;    
+}
+
+section > picture{
+ 
+  display: block;    
+  text-align: center;
+  padding:20px;
+}
+
+section > picture > img{
+  border:2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+section > picture > img:hover {
+border: 3px solid red;
+animation: translateY 0.8s infinite alternate;
+}
+
+@keyframes translateY {
+from {
+  transform: translateY(0px) scale(1);
+}
+to {
+  transform: translateY(10px) scale(1.07);
+}
 }
 
 
-
-section{
-    width: 100%;
-    padding-bottom: 10px;
-    background-color: white;
- }
-
- section > h1{
+section > p{
     
-    display: block;
-    font-weight: bolder;
-    padding:20px;    
- }
+  padding:20px;
+  font-weight: normal;
+  font-size: 1.5em;
+  text-indent: 30px;
+  text-align: justify;
+}
 
- section > picture{
-   
-    display: block;    
-    text-align: center;
-    padding:20px;
- }
+section  input{
+  
+  cursor: pointer;
+  background-color: red;
+  padding:20px;
+  display: block;    
+  margin:auto;
+  border-radius: 8px;
+  font-size:1.2em;
+  font-weight: bold;
+}
 
- section > picture > img{
-    border:2px solid black;
-    border-radius: 50%;
-    cursor: pointer;
- }
-
- section > picture > img:hover {
-  border: 3px solid red;
+section  input:hover{
+  
+  border: 3px solid rgb(8, 8, 8);
   animation: translateY 0.8s infinite alternate;
 }
 
@@ -118,89 +148,50 @@ section{
   }
 }
 
-footer p {
+aside{
+  background-color: rgb(10, 10, 10);
+  padding:20px;
   text-align: center;
 }
 
- section > p{
-    
-    padding:20px;
-    font-weight: normal;
-    font-size: 1.5em;
-    text-indent: 30px;;
- }
-
- section  input{
-    
-    cursor: pointer;
-    background-color: red;
-    padding:20px;
-    display: block;    
-    margin:auto;
-    border-radius: 8px;
-    font-size:1.2em;
-    font-weight: bold;
- }
-
- section  input:hover{
-    
-    border: 3px solid rgb(8, 8, 8);
-    animation: translateY 0.8s infinite alternate;
-  }
+aside > h2{
+  text-align: left;
+  color: white;
+  padding-bottom: 10px;
+}
+aside > img {
   
-  @keyframes translateY {
-    from {
-      transform: translateY(0px) scale(1);
-    }
-    to {
-      transform: translateY(10px) scale(1.07);
-    }
-  }
+  padding:20px;
+  display: block;
+  
+  
+}
+aside div.box > img{
+ width: 100px;
+}
 
- aside{
-    background-color: rgb(10, 10, 10);
-    padding:20px;
-    text-align: center;
- }
+aside div.box{
+  display: inline-block;    
+  cursor: pointer;
+  
+}
 
- aside > h2{
-    text-align: left;
-    color: white;
-    padding-bottom: 10px;
- }
- aside > img {
-    
-    padding:20px;
-    display: block;
-    
-    
- }
- aside div.box > img{
-   width: 100px;
- }
-
- aside div.box{
-    display: inline-block;    
-    cursor: pointer;
-    
- }
-
- aside div.box:hover{
-  animation: translateY 0.8s infinite alternate;
+aside div.box:hover{
+animation: translateY 0.8s infinite alternate;
 }
 
 @keyframes translateY {
-  from {
-    transform: translateY(0) scale(1);
-  }
-  to {
-    transform: translateY(-8px) scale(1.07);
-  }
+from {
+  transform: translateY(0) scale(1);
+}
+to {
+  transform: translateY(-8px) scale(1.07);
+}
 }
 
- aside figcaption{
-    color: white;    
- }
+aside figcaption{
+  color: white;    
+}
 
  article{
     
@@ -230,8 +221,7 @@ footer p {
    height: 300px;
    margin: 0 auto;
    overflow: hidden;
-   
- }
+}
 
 .slides{
    width: 400%;
@@ -374,7 +364,7 @@ footer p {
    padding: 5px;
    margin-bottom: 15px;
 }
-
+ 
  footer img{
    cursor: pointer;
    width: 50px;
@@ -403,29 +393,60 @@ a{
    text-decoration:none;
 }
 
-.btn-whatsapp .tooltip-text{
-  visibility: hidden;
-  position: absolute;
-  width: 120px;
-  padding: 6px;
-  background-color: black;
-  border-radius: 5px;
-  color: #FFF;
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-.btn-whatsapp:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
 
 strong:hover{
-   font-size:1.5em;
-   text-decoration: 2px underline red;
+  font-size:1.5em;
+  text-decoration: 2px underline red;
 }
 
-.foto{
-   height: 300px;
+
+footer p {
+ text-align: center;
 }
 
+/*
+@media screen and (max-width: 280){
+  .slider{
+   
+    width: 250px; /*tem que ser do tamanho da img*
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+ }
+  .manual-navigation{
+    position: absolute;
+    width: 250px; /*tem que ser do tamnho do slider
+    margin-top: 250px;
+    z-index: 99;
+    display: flex;/*altura do radios manual
+    justify-content: center; 
+  }
+  .navigation-auto{
+    
+    position: absolute;
+    width: 250px;/*tem que ser do tamnho do slider
+    margin-top: 250px;/*tem quer ser alinhados com radios manual
+    display: flex;
+    z-index: 1;   
+    justify-content: center;
+ }
+  article > div.slider > div.slides > div.slide-first > img{
+    width: 250px;
+  }
+
+  article > div.slider > div.slides > div.slide > a > img{
+   
+    width: 250px;
+  }
+ 
+  article > div.slider > div.slides > div.slide > img{
+    width: 250px;
+  }
+
+  .foto{
+    height: 250px;
+    
+  }
+}
+
+*/

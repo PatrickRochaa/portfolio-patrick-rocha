@@ -7,9 +7,7 @@
      }
 
     body{
-        
-        background-color: rgb(255, 255, 255);
-        
+        margin: auto;
     }
 
     div.burguer {
@@ -22,7 +20,7 @@
         display: block;
         padding: 15px;
         margin:auto;
-        width: 90vw;
+        max-width: 885px;
     }
     span#burguer {
         display: none;
@@ -58,7 +56,7 @@
     section{
         display: block;
         margin:auto;
-        max-width: 90%;
+        max-width: 885px;
     }
 
     section > h1{
@@ -89,7 +87,7 @@
         padding:20px;
         font-weight: normal;
         font-size: 1.5em;
-        text-indent: 30px;;
+        text-indent: 30px;
      }
     
      section  input{
@@ -104,7 +102,7 @@
      }
     
      aside{
-      max-width: 86%;
+      max-width: 885px;
       margin: auto;
      }
 
@@ -123,9 +121,9 @@
         border-radius:0px 0px 10px 10px;
         text-align: center;
         background-color: rgb(58, 11, 58);
-        max-width: 90%;
+        max-width: 885px;
         margin: auto;
-        height: 50vh;
+        height: 420px;
         margin-bottom: 10px;
         
      }
@@ -223,6 +221,7 @@
       width: 450px;
     }
     
+  
 }
 
 
