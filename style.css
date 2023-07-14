@@ -147,3 +147,50 @@ section  input:hover{
     transform: translateY(10px) scale(1.07);
   }
 }
+
+
+aside{
+  background-color: rgb(10, 10, 10);
+  padding:20px;
+  text-align: center;
+}
+
+aside > h2{
+  text-align: left;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+aside > img {
+  
+  padding:20px;
+  display: block;
+  
+  
+}
+aside div.box > img{
+ width: 100px;
+}
+
+aside div.box{
+  display: inline-block;    
+  cursor: pointer;
+  
+}
+
+aside div.box:hover{
+animation: translateY 0.8s infinite alternate;
+}
+
+@keyframes translateY {
+from {
+  transform: translateY(0) scale(1);
+}
+to {
+  transform: translateY(-8px) scale(1.07);
+}
+}
+
+aside figcaption{
+  color: white;    
+}
