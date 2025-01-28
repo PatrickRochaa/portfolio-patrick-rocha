@@ -1,0 +1,85 @@
+/* Garanta que o corpo da página ocupe toda a altura */
+html,
+body {
+  height: 100%;
+  margin: 0; /* Remove o espaço extra */
+}
+
+/* Estilos para o footer */
+footer {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3)
+  ); /* Cor mais escura */
+  text-align: center; /* Alinha o texto ao centro */
+  padding: 2rem 0; /* Espaçamento interno do footer */
+  margin-top: auto; /* Garante que o footer fique no final */
+  width: 100%; /* Garante que o footer ocupe toda a largura */
+}
+/* Linha decorativa no topo da seção (#footer) em diagonal */
+footer::before {
+  content: "";
+  position: absolute; /* Posição absoluta em relação ao #sobre */
+  top: 0; /* Fixado ao fundo */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta o alinhamento central */
+  width: 80%; /* Largura ajustável da linha */
+  height: 2px; /* Espessura da linha */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--orange-yellow-crayola),
+    rgba(255, 255, 255, 0)
+  ); /* Gradiente suave com transparência nas bordas */
+}
+
+/* Detalhe com imagem no ::before */
+footer::before {
+  content: ""; /* Necessário para o pseudo-elemento */
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  left: 0; /* Posiciona a imagem à direita */
+  transform: translateY(-50%); /* Ajusta para centralizar */
+  width: 100px; /* Ajuste a largura da imagem */
+  height: 100px; /* Ajuste a altura da imagem */
+  background-image: url("../imagens-contato/code.svg");
+  background-size: cover; /* Faz a imagem cobrir o espaço definido */
+  background-position: center; /* Centraliza a imagem */
+  z-index: -1;
+}
+
+/* Estilos para o título no footer */
+footer .title {
+  font-size: 1.5rem; /* Tamanho da fonte do título */
+  font-weight: bold; /* Deixa o título em negrito */
+  margin-bottom: 1.5rem; /* Espaçamento abaixo do título */
+  color: var(--orange-yellow-crayola); /* Cor do título */
+}
+
+/* Estilos para os ícones de redes sociais */
+footer .social {
+  display: flex; /* Flexbox para alinhar os ícones de redes sociais */
+  justify-content: center; /* Centraliza os ícones */
+  gap: 1.5rem; /* Espaçamento entre os ícones */
+}
+
+footer .social a {
+  display: inline-block; /* Garante que o link seja exibido como um bloco em linha */
+  border: 1px solid var(--orange-yellow-crayola);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+footer .social img {
+  width: 30px; /* Define o tamanho dos ícones */
+  height: 30px; /* Define a altura dos ícones */
+  transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+footer .social a:hover {
+  transform: scale(1.1); /* Aumenta o tamanho dos ícones ao passar o mouse */
+}

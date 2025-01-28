@@ -1,0 +1,239 @@
+/* Seção Sobre Mim */
+#sobre {
+  margin-top: 18px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3)
+  ); /* Gradiente de fundo */
+  border: 1px solid var(--borda); /* Borda clara */
+  color: var(--light-gray); /* Cor do texto */
+  padding: 4rem 2rem; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto no centro */
+  display: flex; /* Usando flexbox para layout */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  backdrop-filter: blur(10px); /* Desfoque de fundo para um toque moderno */
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra interna */
+  position: relative; /* Para permitir o uso de pseudo-elementos */
+}
+
+/* Linha decorativa no topo da seção (#sobre) em diagonal */
+#sobre::after {
+  content: "";
+  position: absolute; /* Posição absoluta em relação ao #sobre */
+  top: 0; /* Fixado ao fundo */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta o alinhamento central */
+  width: 80%; /* Largura ajustável da linha */
+  height: 2px; /* Espessura da linha */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--orange-yellow-crayola),
+    rgba(255, 255, 255, 0)
+  ); /* Gradiente suave com transparência nas bordas */
+}
+
+/* Linha decorativa no rodapé da seção (#sobre) em diagonal */
+#sobre::before {
+  content: "";
+  position: absolute; /* Posição absoluta em relação ao #sobre */
+  bottom: 0; /* Fixado ao fundo */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta o alinhamento central */
+  width: 80%; /* Largura ajustável da linha */
+  height: 2px; /* Espessura da linha */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--orange-yellow-crayola),
+    rgba(255, 255, 255, 0)
+  ); /* Gradiente suave com transparência nas bordas */
+}
+
+/* Estilo do contêiner do h2 */
+.h2-container {
+  display: flex; /* Usando flexbox */
+  align-items: center; /* Alinha a linha e o texto verticalmente */
+  gap: 10px; /* Espaço entre o h2 e a linha */
+  margin-left: 1.5rem; /* Ajusta a margem do h2 */
+  position: relative;
+}
+
+/* Detalhes criativos para o título (H1) */
+#sobre h1 {
+  font-size: 3rem;
+  color: var(--orange-yellow-crayola); /* Cor vibrante para o título */
+  margin-bottom: 1rem;
+  position: relative;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Detalhe com imagem no ::before */
+#sobre h1::before {
+  content: ""; /* Necessário para o pseudo-elemento */
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  right: 0%; /* Posiciona a imagem à direita */
+  transform: translateY(-50%); /* Ajusta para centralizar */
+  width: 150px; /* Ajuste a largura da imagem */
+  height: 150px; /* Ajuste a altura da imagem */
+  background-image: url("../imagens-contato/code.svg");
+  background-size: cover; /* Faz a imagem cobrir o espaço definido */
+  background-position: center; /* Centraliza a imagem */
+}
+
+/* Linha decorativa abaixo do título */
+#sobre h1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 150px;
+  height: 6px;
+  margin-top: -0.8rem;
+  margin-bottom: 1.2rem;
+  background: var(--gradiente-ouro); /* Mesma cor do título */
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Detalhes criativos para o subtítulo (H2) */
+h2 {
+  font-size: 2rem; /* Tamanho ajustado */
+  color: var(--white-1);
+  font-weight: normal; /* Leveza no subtítulo */
+  display: block; /* Faz o h2 ocupar apenas o espaço necessário */
+  position: relative;
+  margin: 0; /* Remove margens adicionais */
+}
+
+/* Linha decorativa ao lado do h2 */
+h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 6px; /* Comprimento da linha */
+  height: 2rem; /* Espessura da linha */
+  background: var(--vermelho-destaque); /* Cor da linha */
+  border-radius: 2px;
+  left: -10px; /* Ajuste a posição da linha */
+  top: 50%; /* Alinha a linha ao centro do h2 */
+  transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+}
+
+/* Detalhes e responsividade da imagem */
+.containerIMG {
+  position: relative; /* Permite posicionar os elementos dentro */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Alinha a imagem no centro */
+}
+
+.containerIMG::after {
+  content: "";
+  position: absolute; /* Fixa a imagem de código atrás da imagem de perfil */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../imagens-contato/code.svg");
+  background-size: contain; /* A imagem será redimensionada para caber */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-position: center; /* Centraliza a imagem */
+  z-index: -1; /* Coloca a imagem atrás da imagem de perfil */
+  opacity: 0.1; /* Dá uma leve transparência para a imagem de código */
+}
+
+/* Imagem de perfil */
+.foto-perfil {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--title);
+}
+
+.containerInfo {
+  flex: 2;
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--texto);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 700px) {
+  #sobre {
+    padding: 6rem 4rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    max-width: 900px;
+  }
+
+  .sobre-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .foto-perfil {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .sobre-texto {
+    text-align: left;
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 699px) {
+  .sobre-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  #sobre {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
