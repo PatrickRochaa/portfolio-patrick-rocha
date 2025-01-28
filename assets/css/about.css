@@ -84,6 +84,7 @@
   background-image: url("../imagens-contato/code.svg");
   background-size: cover; /* Faz a imagem cobrir o espaço definido */
   background-position: center; /* Centraliza a imagem */
+  z-index: -1;
 }
 
 /* Linha decorativa abaixo do título */
