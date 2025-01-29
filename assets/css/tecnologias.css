@@ -1,40 +1,53 @@
 /* Seção de Tecnologias que conheço */
-#tecnlogias {
-  padding: 4rem 2rem; /* Espaçamento interno */
+#tecnologias {
+  padding: 4rem 2rem;
+  /* Espaçamento interno */
 }
 
 /* Título da seção */
-#tecnlogias h2 {
-  font-size: 2rem; /* Tamanho do título ajustado para dispositivos móveis */
-  color: var(--orange-yellow-crayola); /* Cor do título */
-  margin-bottom: 2rem; /* Espaçamento abaixo do título */
+#tecnologias h2 {
+  font-size: 2rem;
+  /* Tamanho do título ajustado para dispositivos móveis */
+  color: var(--orange-yellow-crayola);
+  /* Cor do título */
+  margin-bottom: 2rem;
+  /* Espaçamento abaixo do título */
 }
 
 /* Lista de tecnologias */
 .tecnologias-lista {
-  list-style-type: none; /* Remove os pontos da lista */
-  display: grid; /* Usando grid para organizar as imagens */
-  grid-template-columns: repeat(
-    2,
-    1fr
-  ); /* 2 ícones por linha em dispositivos móveis */
-  gap: 2rem; /* Espaçamento entre os itens da lista */
-  justify-items: center; /* Centraliza os itens dentro das células */
+  list-style-type: none;
+  /* Remove os pontos da lista */
+  display: grid;
+  /* Usando grid para organizar as imagens */
+  grid-template-columns: repeat(2,
+      1fr);
+  /* 2 ícones por linha em dispositivos móveis */
+  gap: 2rem;
+  /* Espaçamento entre os itens da lista */
+  justify-items: center;
+  /* Centraliza os itens dentro das células */
   padding: 0;
 }
 
 /* Estilo das imagens dentro da lista */
 .tecnologias-lista img {
-  width: 70px; /* Tamanho das imagens aumentado para 70px */
-  height: 70px; /* Tamanho das imagens aumentado para 70px */
-  object-fit: contain; /* Garante que a imagem seja ajustada dentro do espaço disponível sem distorcer */
-  margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+  width: 70px;
+  /* Tamanho das imagens aumentado para 70px */
+  height: 70px;
+  /* Tamanho das imagens aumentado para 70px */
+  object-fit: contain;
+  /* Garante que a imagem seja ajustada dentro do espaço disponível sem distorcer */
+  margin-bottom: 1rem;
+  /* Espaçamento abaixo da imagem */
 }
 
 /* Estilo para os itens da lista */
 .tecnologias-lista li {
-  font-size: 1.2rem; /* Tamanho da fonte */
-  color: var(--light-gray); /* Cor do texto */
+  font-size: 1.2rem;
+  /* Tamanho da fonte */
+  color: var(--light-gray);
+  /* Cor do texto */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,27 +56,30 @@
 
 /* Ajustes para tablets */
 @media (min-width: 700px) {
+
   /* Ajuste do título em telas maiores */
-  #tecnlogias h2 {
+  #tecnologias h2 {
     font-size: 2.5rem;
   }
 
   .tecnologias-lista {
-    grid-template-columns: repeat(3, 1fr); /* 3 ícones por linha em tablets */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 ícones por linha em tablets */
   }
 }
 
 /* Ajustes para desktop */
 @media (min-width: 1024px) {
+
   /* Ajuste do título em telas ainda maiores */
-  #tecnlogias h2 {
-    font-size: 3rem; /* Tamanho do título ajustado para desktop */
+  #tecnologias h2 {
+    font-size: 3rem;
+    /* Tamanho do título ajustado para desktop */
   }
 
   .tecnologias-lista {
-    grid-template-columns: repeat(
-      4,
-      1fr
-    ); /* Máximo de 4 ícones por linha no desktop */
+    grid-template-columns: repeat(4,
+        1fr);
+    /* Máximo de 4 ícones por linha no desktop */
   }
 }

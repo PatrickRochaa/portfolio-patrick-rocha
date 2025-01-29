@@ -11,47 +11,63 @@
   <body>
   <!-- Inicio Header-->
   <header class="container">
-    <div class="navbar">
-      <div class="logo">
-        <h1>PR</h1>
-      </div>
-
-      <div class="menu-opener">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div class="logo">
+      <h1>PR</h1>
     </div>
     <nav>
-      <a href="#tecnlogias">Tecnologias</a>
-  <a href="#projetos">Projetos</a>
-  <a href="#contato">Contato</a>
-    </nav>
+      <a href="#sobre" onclick="showSection('sobre')">Sobre Mim</a>
+      <a href="#tecnologias" onclick="showSection('tecnologias')">Tecnologias</a>
+      <a href="#projetos" onclick="showSection('projetos')">Projetos</a>
+    </nav>    
   </header>
   <!-- Fim Header-->
 
 
 <!--Seção Sobre Mim-->
 <section id="sobre" class="container">
-  <div class="containerIMG">
-    <img src="assets/utilidades/patrick3.png" alt="Foto de Patrick Rocha" class="foto-perfil" />
-  </div>
-  <div class="containerInfo">
-    <h1>Patrick Rocha</h1>
-    <div class="h2-container">
-      <h2>Sobre Mim</h2>
+  <div class="containerSobre">
+    <div class="containerIMG">
+      <img src="assets/utilidades/patrick3.png" alt="Foto de Patrick Rocha" class="foto-perfil" />
     </div>
-    <p>
-      Sou um desenvolvedor web iniciante, focado em aprender e criar soluções práticas e eficientes. Estou sempre buscando novos desafios e oportunidades para aprimorar minhas habilidades em HTML, CSS e JavaScript, além de explorar tecnologias como React.
-    </p>
-    <p>
-      Acredito que o melhor jeito de aprender é desafiando-me constantemente com projetos práticos, seja criando um e-commerce, um portfólio ou uma aplicação interativa, por isso, estou constantemente me dedicando a projetos reais para me preparar para minha primeira oportunidade como desenvolvedor.
+    <div class="containerInfo">
+      <h1>Patrick Rocha</h1>
+      <div class="h2-container">
+        <h2>Sobre Mim</h2>
+      </div>
+      <p>
+        Sou um desenvolvedor web iniciante, focado em aprender e criar soluções práticas e eficientes. Estou sempre buscando novos desafios e oportunidades para aprimorar minhas habilidades em HTML, CSS e JavaScript, além de explorar tecnologias como React.
+      </p>
+      <p>
+        Acredito que o melhor jeito de aprender é desafiando-me constantemente com projetos práticos, seja criando um e-commerce, um portfólio ou uma aplicação interativa, por isso, estou constantemente me dedicando a projetos reais para me preparar para minha primeira oportunidade como desenvolvedor.
+      </p>
+    </div>
+  </div>
+
+  <!-- links redirecionamento -->
+  <div class="links">
+    <div class="social">
+      <a href="https://www.linkedin.com/in/patrick-rocha-b9a0b1274/" target="_blank">
+        <img src="assets/imagens-contato/social_linkedin.svg" alt="linkedin" />
+      </a>
+      <a href="https://github.com/PatrickRochaa" target="_blank">
+        <img src="assets/imagens-contato/github-svgrepo-com.svg" alt="gitHub" />
+      </a>
+      <a href="https://www.instagram.com/patricck.rochaa/" target="_blank">
+        <img src="assets/imagens-contato/social_ig.svg" alt="instagram" />
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5531985385297" target="_blank">
+        <img src="assets/imagens-contato/social_zap.svg" alt="WhatsApp" />
+      </a>
+    </div>
+    <p class="title">
+      Vivendo, aprendendo e melhorando um dia de cada vez.
     </p>
   </div>
 </section>
 
+
     <!--Seçao de Tecnologias que conheço-->
-    <section id="tecnlogias"  class="container">
+    <section id="tecnologias"  class="container">
       <h2>Tecnologias</h2>
       <ul class="tecnologias-lista">
         <li>
@@ -136,31 +152,7 @@
       </div>
     </section>    
     
-    <!--Inicio Footer-->
-    <footer>
-      <p class="title">Vivendo, aprendendo e melhorando um dia de cada vez.</p>
-      <div class="social">
-        <a href="https://www.linkedin.com/in/patrick-rocha-b9a0b1274/"  target="_blank">
-          <img
-            src="assets/imagens-contato//social_linkedin.svg"
-            alt="linkedin"
-          />
-        </a>
-
-        <a href="https://github.com/PatrickRochaa" target="_blank">
-          <img src="assets/imagens-contato/github-svgrepo-com.svg" alt="gitHub" />
-        </a>
-
-        <a href="https://www.instagram.com/patricck.rochaa/" target="_blank">
-          <img src="assets/imagens-contato/social_ig.svg" alt="instagram" />
-        </a>
-
-        <a href="https://api.whatsapp.com/send?phone=5531985385297" target="_blank">
-          <img src="assets/imagens-contato//social_zap.svg" alt="WhatsApp" />
-        </a>
-      </div>
-    </footer>
-    <!--Fim Footer-->
+    
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,3 +1,10 @@
+/* Garanta que o corpo da página ocupe toda a altura */
+html,
+body {
+  height: 100%;
+  margin: 0; /* Remove o espaço extra */
+}
+
 /* Estilos para o footer */
 footer {
   position: relative;
@@ -12,7 +19,7 @@ footer {
   width: 100%; /* Garante que o footer ocupe toda a largura */
 }
 /* Linha decorativa no topo da seção (#footer) em diagonal */
-footer::after {
+footer::before {
   content: "";
   position: absolute; /* Posição absoluta em relação ao #sobre */
   top: 0; /* Fixado ao fundo */
@@ -75,25 +82,4 @@ footer .social img {
 
 footer .social a:hover {
   transform: scale(1.1); /* Aumenta o tamanho dos ícones ao passar o mouse */
-}
-
-@media (max-width: 600px) {
-  footer .title {
-    font-size: 1.2rem; /* Reduz o tamanho da fonte */
-    max-width: 80%; /* Limita a largura para evitar quebras feias */
-    margin: 0 auto 1rem; /* Centraliza e ajusta o espaçamento */
-  }
-
-  footer .social {
-    gap: 1rem; /* Diminui o espaçamento entre os ícones */
-  }
-
-  footer .social img {
-    width: 30px; /* Reduz o tamanho dos ícones */
-    height: 30px;
-  }
-
-  footer .social a {
-    padding: 6px; /* Ajuste no padding para manter o equilíbrio */
-  }
 }

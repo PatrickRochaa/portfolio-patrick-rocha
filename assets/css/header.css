@@ -1,13 +1,12 @@
-/* Estilo principal do cabeçalho */
+/* Estilos do Header e Menu */
 header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.3)
-  );
+  justify-content: space-between;
+  /* Garante que o logo fique à esquerda e o menu à direita */
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.3));
   border: 1px solid var(--borda);
   position: relative;
   padding: 1rem;
@@ -23,15 +22,13 @@ header::after {
   transform: translateX(-50%);
   width: 80%;
   height: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    var(--orange-yellow-crayola),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      var(--orange-yellow-crayola),
+      rgba(255, 255, 255, 0));
 }
 
-/* Linha decorativa no rodapé da seção (#sobre) em diagonal */
+/* Linha decorativa no rodapé da seção  */
 header::before {
   content: "";
   position: absolute;
@@ -40,31 +37,13 @@ header::before {
   transform: translateX(-50%);
   width: 80%;
   height: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    var(--orange-yellow-crayola),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      var(--orange-yellow-crayola),
+      rgba(255, 255, 255, 0));
 }
 
-/* Navbar principal */
-.navbar {
-  width: 100%;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Logo */
-.logo img {
-  max-width: 6rem;
-  height: auto;
-  transition: all 0.3s ease;
-}
-
-/*Inicias Header*/
+/* Estilos para o logo */
 .logo h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -72,85 +51,44 @@ header::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
+  /* Garante que o texto do logo fique à esquerda */
   position: relative;
   transition: transform 0.3s ease;
 }
 
 .logo h1::before {
-  content: ""; /* Necessário para o pseudo-elemento */
+  content: "";
+  /* Necessário para o pseudo-elemento */
   position: absolute;
   z-index: -1;
-  top: 50%; /* Centraliza verticalmente */
-  left: 20%; /* Posiciona a imagem à direita */
-  transform: translateY(-50%); /* Ajusta para centralizar */
-  width: 50px; /* Ajuste a largura da imagem */
-  height: 50px; /* Ajuste a altura da imagem */
+  top: 50%;
+  /* Centraliza verticalmente */
+  left: 50%;
+  /* Posiciona a imagem à direita */
+  transform: translateY(-50%);
+  /* Ajusta para centralizar */
+  width: 50px;
+  /* Ajuste a largura da imagem */
+  height: 50px;
+  /* Ajuste a altura da imagem */
   background-image: url("../imagens-contato/code.svg");
-  background-size: cover; /* Faz a imagem cobrir o espaço definido */
-  background-position: center; /* Centraliza a imagem */
-}
-
-/* Botão hambúrguer */
-.menu-opener {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 3rem;
-  height: 3rem;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.3s ease; /* Transição suave para o transform */
-}
-
-/* Cada barra do menu hambúrguer */
-.menu-opener span {
-  display: block;
-  width: 2.4rem;
-  height: 0.3rem;
-  background-color: var(--light-gray);
-  border-radius: 2px;
-  transition: all 0.3s ease; /* Transição suave para todas as propriedades */
-}
-
-/* Interação do botão hambúrguer */
-.menu-opener:hover span {
-  background-color: var(--orange-yellow-crayola);
-}
-
-/* Transformação para o 'X' */
-.menu-opener.opened span:nth-child(1) {
-  transform: rotate(45deg);
-  position: absolute;
-}
-
-.menu-opener.opened span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-opener.opened span:nth-child(3) {
-  transform: rotate(-45deg);
-  position: absolute;
+  background-size: cover;
+  /* Faz a imagem cobrir o espaço definido */
+  background-position: center;
+  /* Centraliza a imagem */
 }
 
 /* Menu de navegação */
 header nav {
-  display: none;
-  flex-direction: column;
+  display: flex;
   align-items: center;
+  justify-content: flex-end;
+  /* Alinha o menu à direita */
   gap: 1.5rem;
   padding: 2rem;
   width: 100%;
   background-color: var(--eerie-black-2);
-  opacity: 0; /* Inicialmente invisível */
-}
-
-/* Mostra o menu de navegação quando o botão hambúrguer for clicado */
-header nav.opened {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Links do menu */
@@ -163,20 +101,6 @@ nav a {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  opacity: 0; /* Inicialmente invisível */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Animação suave para opacidade e movimento */
-  animation: show-up 1s forwards;
-}
-
-@keyframes show-up {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -30px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 nav a::after {
@@ -198,73 +122,21 @@ nav a:hover {
   color: var(--orange-yellow-crayola);
 }
 
-/* Mostra os links do menu um a um com um atraso */
-header nav.opened a {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-header nav.opened a:nth-child(1) {
-  transition-delay: 0.2s;
-}
-
-header nav.opened a:nth-child(2) {
-  transition-delay: 0.4s;
-}
-
-header nav.opened a:nth-child(3) {
-  transition-delay: 0.6s;
-}
-
-header nav.opened a:nth-child(4) {
-  transition-delay: 0.8s;
-}
-
-/* Responsividade */
-@media (min-width: 700px) {
+/* Media query para dispositivos maiores */
+@media (min-width: 768px) {
   header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
+    padding: 1rem 4rem;
+    /* Ajusta o padding no desktop */
   }
 
-  .menu-opener {
-    display: none; /* Esconde o botão hambúrguer em telas grandes */
-  }
-
-  header nav {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    background-color: transparent;
-    width: auto;
-    padding: 0;
-    opacity: 1;
-    transform: none;
-  }
-
-  header nav a {
-    width: auto;
-    text-align: left;
-    font-size: 1.2rem; /* Aumenta o tamanho da fonte no desktop */
-  }
-
-  .logo img {
-    max-width: 150px;
-  }
-}
-
-@media (max-width: 450px) {
-  .navbar {
-    padding: 1rem;
+  /* Seções do header no desktop */
+  .logo h1 {
+    font-size: 3rem;
+    /* Aumenta o tamanho do logo no desktop */
   }
 
   nav a {
-    font-size: 1.1rem; /* Aumenta um pouco para visibilidade em telas menores */
-  }
-
-  .menu-opener span {
-    width: 2.5rem; /* Ajusta a largura do menu hambúrguer */
-    height: 0.3rem;
+    font-size: 1.2rem;
+    /* Ajusta o tamanho da fonte para links do menu */
   }
 }
