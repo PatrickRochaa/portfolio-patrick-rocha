@@ -103,6 +103,7 @@ nav a {
   letter-spacing: 0.05rem;
 }
 
+/* Efeito no hover para os links do menu */
 nav a::after {
   content: "";
   width: 0;
@@ -114,13 +115,26 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
+/* Quando um link está ativo, a linha aparece */
+nav a.active::after {
+  width: 100%;
+}
+
+/* Efeito de hover: a linha aparece ao passar o mouse */
 nav a:hover::after {
   width: 100%;
 }
 
+/* Cor do link ativo */
+nav a.active {
+  color: var(--orange-yellow-crayola);
+}
+
+/* Mantém a cor no hover */
 nav a:hover {
   color: var(--orange-yellow-crayola);
 }
+
 
 /* Media query para dispositivos maiores */
 @media (min-width: 768px) {
