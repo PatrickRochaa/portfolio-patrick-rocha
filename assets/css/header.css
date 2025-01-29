@@ -2,11 +2,12 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  /* Garante que o logo fique à esquerda e o menu à direita */
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.3));
+  justify-content: space-between; /* Garante que o logo fique à esquerda e o menu à direita */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3)
+  );
   border: 1px solid var(--borda);
   position: relative;
   padding: 1rem;
@@ -22,10 +23,12 @@ header::after {
   transform: translateX(-50%);
   width: 80%;
   height: 2px;
-  background: linear-gradient(to right,
-      rgba(255, 255, 255, 0),
-      var(--orange-yellow-crayola),
-      rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--orange-yellow-crayola),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 /* Linha decorativa no rodapé da seção  */
@@ -37,10 +40,12 @@ header::before {
   transform: translateX(-50%);
   width: 80%;
   height: 2px;
-  background: linear-gradient(to right,
-      rgba(255, 255, 255, 0),
-      var(--orange-yellow-crayola),
-      rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--orange-yellow-crayola),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 /* Estilos para o logo */
@@ -51,40 +56,30 @@ header::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  text-align: left;
-  /* Garante que o texto do logo fique à esquerda */
+  text-align: left; /* Garante que o texto do logo fique à esquerda */
   position: relative;
   transition: transform 0.3s ease;
 }
 
 .logo h1::before {
-  content: "";
-  /* Necessário para o pseudo-elemento */
+  content: ""; /* Necessário para o pseudo-elemento */
   position: absolute;
   z-index: -1;
-  top: 50%;
-  /* Centraliza verticalmente */
-  left: 50%;
-  /* Posiciona a imagem à direita */
-  transform: translateY(-50%);
-  /* Ajusta para centralizar */
-  width: 50px;
-  /* Ajuste a largura da imagem */
-  height: 50px;
-  /* Ajuste a altura da imagem */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Posiciona a imagem à direita */
+  transform: translateY(-50%); /* Ajusta para centralizar */
+  width: 50px; /* Ajuste a largura da imagem */
+  height: 50px; /* Ajuste a altura da imagem */
   background-image: url("../imagens-contato/code.svg");
-  background-size: cover;
-  /* Faz a imagem cobrir o espaço definido */
-  background-position: center;
-  /* Centraliza a imagem */
+  background-size: cover; /* Faz a imagem cobrir o espaço definido */
+  background-position: center; /* Centraliza a imagem */
 }
 
 /* Menu de navegação */
 header nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  /* Alinha o menu à direita */
+  justify-content: flex-end; /* Alinha o menu à direita */
   gap: 1.5rem;
   padding: 2rem;
   width: 100%;
@@ -135,22 +130,18 @@ nav a:hover {
   color: var(--orange-yellow-crayola);
 }
 
-
 /* Media query para dispositivos maiores */
 @media (min-width: 768px) {
   header {
-    padding: 1rem 4rem;
-    /* Ajusta o padding no desktop */
+    padding: 1rem 4rem; /* Ajusta o padding no desktop */
   }
 
   /* Seções do header no desktop */
   .logo h1 {
-    font-size: 3rem;
-    /* Aumenta o tamanho do logo no desktop */
+    font-size: 3rem; /* Aumenta o tamanho do logo no desktop */
   }
 
   nav a {
-    font-size: 1.2rem;
-    /* Ajusta o tamanho da fonte para links do menu */
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte para links do menu */
   }
 }

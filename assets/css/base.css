@@ -9,15 +9,14 @@
   --vegas-gold: hsl(45, 54%, 58%);
   --light-gray: hsl(0, 0%, 84%);
   /* Gradiente para ser usado em before H1 */
-  --gradiente-ouro: linear-gradient(45deg,
-      var(--orange-yellow-crayola),
-      var(--vegas-gold));
+  --gradiente-ouro: linear-gradient(
+    45deg,
+    var(--orange-yellow-crayola),
+    var(--vegas-gold)
+  );
 
   /* Gradiente para ser usado em before H2 */
-  --vermelho-destaque: linear-gradient(135deg,
-      #ff5733,
-      #f44336,
-      #d32f2f);
+  --vermelho-destaque: linear-gradient(135deg, #ff5733, #f44336, #d32f2f);
   /* Gradiente do vermelho */
   /* Cor vermelha para o detalhe */
 }
@@ -55,19 +54,16 @@ a {
 section {
   display: none;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  /* Esconde todas as seções com efeito de opacidade */
+  transition: opacity 0.5s ease-in-out; /* Esconde todas as seções com efeito de opacidade */
 }
 
 section:target {
   display: block;
-  opacity: 1;
-  /* Exibe a seção quando o link de navegação for clicado com efeito de opacidade */
+  opacity: 1; /* Exibe a seção quando o link de navegação for clicado com efeito de opacidade */
 }
 
 section {
-  transition: opacity 0.5s ease-in-out;
-  /* Transição suave para opacidade */
+  transition: opacity 0.5s ease-in-out; /* Transição suave para opacidade */
 }
 
 h2 {
@@ -79,17 +75,11 @@ h2::before {
   content: "";
   position: absolute;
   display: block;
-  width: 6px;
-  /* Comprimento da linha */
-  height: 2rem;
-  /* Espessura da linha */
-  background: var(--vermelho-destaque);
-  /* Cor da linha */
+  width: 6px; /* Comprimento da linha */
+  height: 2rem; /* Espessura da linha */
+  background: var(--vermelho-destaque); /* Cor da linha */
   border-radius: 2px;
-  left: -10px;
-  /* Ajuste a posição da linha */
-  top: 50%;
-  /* Alinha a linha ao centro do h2 */
-  transform: translateY(-50%);
-  /* Ajusta para centralizar verticalmente */
+  left: -10px; /* Ajuste a posição da linha */
+  top: 50%; /* Alinha a linha ao centro do h2 */
+  transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
 }

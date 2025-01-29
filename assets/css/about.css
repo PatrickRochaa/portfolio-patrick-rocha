@@ -1,28 +1,21 @@
 /* Seção Sobre Mim */
 #sobre {
-  margin-top: 18px;
-  /* Adiciona um espaçamento no topo da seção */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-  /* Fundo com gradiente */
-  border: 1px solid var(--borda);
-  /* Borda do container */
-  color: var(--light-gray);
-  /* Cor do texto */
-  padding: 4rem 2rem;
-  /* Espaçamento interno */
-  text-align: center;
-  /* Alinha o texto no centro */
+  margin-top: 18px; /* Adiciona um espaçamento no topo da seção */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3)
+  ); /* Fundo com gradiente */
+  border: 1px solid var(--borda); /* Borda do container */
+  color: var(--light-gray); /* Cor do texto */
+  padding: 4rem 2rem; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto no centro */
   display: flex;
-  flex-direction: column;
-  /* Organiza os itens na direção vertical */
-  align-items: center;
-  /* Alinha os itens no centro horizontalmente */
-  backdrop-filter: blur(10px);
-  /* Efeito de desfoque no fundo */
-  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5);
-  /* Sombra interna */
-  position: relative;
-  /* Necessário para posicionar as linhas decorativas */
+  flex-direction: column; /* Organiza os itens na direção vertical */
+  align-items: center; /* Alinha os itens no centro horizontalmente */
+  backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra interna */
+  position: relative; /* Necessário para posicionar as linhas decorativas */
 }
 
 /* Linha decorativa no topo da seção (#sobre) em diagonal */
@@ -31,13 +24,15 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
-  /* Centraliza a linha */
-  width: 80%;
-  /* Define a largura da linha */
-  height: 2px;
-  /* Altura da linha */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--orange-yellow-crayola), rgba(255, 255, 255, 0));
+  transform: translateX(-50%); /* Centraliza a linha */
+  width: 80%; /* Define a largura da linha */
+  height: 2px; /* Altura da linha */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--orange-yellow-crayola),
+    rgba(255, 255, 255, 0)
+  );
   /* Cor e efeito da linha */
 }
 
@@ -47,36 +42,30 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  /* Centraliza a linha */
-  width: 80%;
-  /* Define a largura da linha */
-  height: 2px;
-  /* Altura da linha */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--orange-yellow-crayola), rgba(255, 255, 255, 0));
+  transform: translateX(-50%); /* Centraliza a linha */
+  width: 80%; /* Define a largura da linha */
+  height: 2px; /* Altura da linha */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--orange-yellow-crayola),
+    rgba(255, 255, 255, 0)
+  );
   /* Cor e efeito da linha */
 }
 
 /* Detalhe com imagem no ::before */
 #sobre h1::before {
-  content: "";
-  /* Necessário para o pseudo-elemento */
+  content: ""; /* Necessário para o pseudo-elemento */
   position: absolute;
-  top: 50%;
-  /* Centraliza verticalmente */
-  right: 0%;
-  /* Posiciona a imagem à direita */
-  transform: translateY(-50%);
-  /* Ajusta para centralizar */
-  width: 150px;
-  /* Ajuste a largura da imagem */
-  height: 150px;
-  /* Ajuste a altura da imagem */
+  top: 50%; /* Centraliza verticalmente */
+  right: 0%; /* Posiciona a imagem à direita */
+  transform: translateY(-50%); /* Ajusta para centralizar */
+  width: 150px; /* Ajuste a largura da imagem */
+  height: 150px; /* Ajuste a altura da imagem */
   background-image: url("../imagens-contato/code.svg");
-  background-size: cover;
-  /* Faz a imagem cobrir o espaço definido */
-  background-position: center;
-  /* Centraliza a imagem */
+  background-size: cover; /* Faz a imagem cobrir o espaço definido */
+  background-position: center; /* Centraliza a imagem */
   z-index: -1;
 }
 
@@ -89,8 +78,7 @@
   height: 6px;
   margin-top: -0.8rem;
   margin-bottom: 1.2rem;
-  background: var(--gradiente-ouro);
-  /* Mesma cor do título */
+  background: var(--gradiente-ouro); /* Mesma cor do título */
   border-radius: 5px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
@@ -98,76 +86,53 @@
 /* Contêiner para foto e texto */
 .containerSobre {
   display: flex;
-  flex-direction: column;
-  /* Organiza os itens na direção vertical */
-  align-items: center;
-  /* Alinha os itens no centro */
-  gap: 2rem;
-  /* Espaçamento entre os itens */
+  flex-direction: column; /* Organiza os itens na direção vertical */
+  align-items: center; /* Alinha os itens no centro */
+  gap: 2rem; /* Espaçamento entre os itens */
 }
 
 .containerIMG {
   flex: 1;
   display: flex;
-  justify-content: center;
-  /* Centraliza a imagem */
-  align-items: center;
-  /* Alinha a imagem verticalmente */
+  justify-content: center; /* Centraliza a imagem */
+  align-items: center; /* Alinha a imagem verticalmente */
 }
 
 .foto-perfil {
-  width: 200px;
-  /* Largura da foto */
-  height: 200px;
-  /* Altura da foto */
-  border-radius: 50%;
-  /* Deixa a foto redonda */
-  object-fit: cover;
-  /* Ajusta a imagem dentro do espaço */
-  border: 3px solid var(--title);
-  /* Borda em torno da foto */
+  width: 200px; /* Largura da foto */
+  height: 200px; /* Altura da foto */
+  border-radius: 50%; /* Deixa a foto redonda */
+  object-fit: cover; /* Ajusta a imagem dentro do espaço */
+  border: 3px solid var(--title); /* Borda em torno da foto */
 }
 
 .containerInfo {
   flex: 2;
-  text-align: justify;
-  /* Alinha o texto de forma justificada */
-  max-width: 800px;
-  /* Largura máxima do texto */
-  margin: 0 auto;
-  /* Centraliza o texto */
+  text-align: justify; /* Alinha o texto de forma justificada */
+  max-width: 800px; /* Largura máxima do texto */
+  margin: 0 auto; /* Centraliza o texto */
 }
 
 /* Melhorias para o conteúdo na .containerInfo */
 .containerInfo p {
-  line-height: 1.6;
-  /* Aumenta o espaçamento entre as linhas para maior legibilidade */
-  margin-bottom: 1.5rem;
-  /* Adiciona margem inferior para separar os parágrafos */
-  font-size: 1.1rem;
-  /* Ajusta o tamanho da fonte para uma leitura mais confortável */
+  line-height: 1.6; /* Aumenta o espaçamento entre as linhas para maior legibilidade */
+  margin-bottom: 1.5rem; /* Adiciona margem inferior para separar os parágrafos */
+  font-size: 1.1rem; /* Ajusta o tamanho da fonte para uma leitura mais confortável */
 }
 
 .containerInfo h1 {
-  font-size: 3rem;
-  /* Tamanho da fonte do título */
-  color: var(--orange-yellow-crayola);
-  /* Cor do título */
-  margin-bottom: 1rem;
-  /* Espaçamento inferior */
+  font-size: 3rem; /* Tamanho da fonte do título */
+  color: var(--orange-yellow-crayola); /* Cor do título */
+  margin-bottom: 1rem; /* Espaçamento inferior */
   position: relative;
   font-weight: bold;
-  text-transform: uppercase;
-  /* Deixa o texto em caixa alta */
-  letter-spacing: 2px;
-  /* Aumenta o espaçamento entre as letras */
+  text-transform: uppercase; /* Deixa o texto em caixa alta */
+  letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
 }
 
 .containerInfo h2 {
-  font-size: 2rem;
-  /* Tamanho da fonte do subtítulo */
-  color: var(--white-1);
-  /* Cor do subtítulo */
+  font-size: 2rem; /* Tamanho da fonte do subtítulo */
+  color: var(--white-1); /* Cor do subtítulo */
   font-weight: normal;
   margin: 0;
 }
@@ -175,93 +140,69 @@
 /* Links sociais */
 .links {
   display: flex;
-  flex-direction: column;
-  /* Organiza os links na direção vertical */
-  gap: 1rem;
-  /* Espaçamento entre os links */
-  align-items: center;
-  /* Alinha os links no centro */
+  flex-direction: column; /* Organiza os links na direção vertical */
+  gap: 1rem; /* Espaçamento entre os links */
+  align-items: center; /* Alinha os links no centro */
 }
 
 /* Estilos para os links sociais */
 .social a {
-  margin: 0 0.5rem;
-  /* Adiciona margem entre os links */
+  margin: 0 0.5rem; /* Adiciona margem entre os links */
 }
 
 /* Estilos para as imagens dos links sociais */
 .links img {
-  width: 50px;
-  /* Tamanho das imagens */
+  width: 50px; /* Tamanho das imagens */
 }
 
 /* Título na seção */
 .title {
-  font-size: 1.2rem;
-  /* Tamanho da fonte do título */
-  margin-top: 1rem;
-  /* Espaçamento superior */
-  font-style: italic;
-  /* Deixa o texto em itálico */
+  font-size: 1.2rem; /* Tamanho da fonte do título */
+  margin-top: 1rem; /* Espaçamento superior */
+  font-style: italic; /* Deixa o texto em itálico */
 }
 
 /* Responsividade */
 @media (min-width: 700px) {
   #sobre {
-    padding: 6rem 4rem;
-    /* Aumenta o espaçamento interno em telas maiores */
+    padding: 6rem 4rem; /* Aumenta o espaçamento interno em telas maiores */
   }
 
   .containerSobre {
-    flex-direction: row;
-    /* Organiza os itens na direção horizontal */
-    justify-content: space-between;
-    /* Espaçamento entre os itens */
-    text-align: left;
-    /* Alinha o texto à esquerda */
+    flex-direction: row; /* Organiza os itens na direção horizontal */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    text-align: left; /* Alinha o texto à esquerda */
   }
 
   .containerIMG {
-    flex: 1;
-    /* Foto ocupa 1 parte do espaço */
+    flex: 1; /* Foto ocupa 1 parte do espaço */
   }
 
   .containerInfo {
-    max-width: 900px;
-    /* Aumenta a largura máxima para melhor distribuição em telas maiores */
-    padding: 0 2rem;
-    /* Adiciona espaçamento nas laterais */
+    max-width: 900px; /* Aumenta a largura máxima para melhor distribuição em telas maiores */
+    padding: 0 2rem; /* Adiciona espaçamento nas laterais */
   }
 
   .containerInfo p {
-    font-size: 1.3rem;
-    /* Aumenta o tamanho da fonte para telas maiores */
-    margin-bottom: 2rem;
-    /* Espaçamento maior entre os parágrafos em telas grandes */
+    font-size: 1.3rem; /* Aumenta o tamanho da fonte para telas maiores */
+    margin-bottom: 2rem; /* Espaçamento maior entre os parágrafos em telas grandes */
   }
 
   .foto-perfil {
-    width: 220px;
-    /* Aumenta o tamanho da foto */
-    height: 220px;
-    /* Aumenta o tamanho da foto */
+    width: 220px; /* Aumenta o tamanho da foto */
+    height: 220px; /* Aumenta o tamanho da foto */
   }
 }
 
 @media (max-width: 699px) {
   .containerSobre {
-    flex-direction: column;
-    /* Organiza os itens na direção vertical */
-    align-items: center;
-    /* Alinha os itens no centro */
+    flex-direction: column; /* Organiza os itens na direção vertical */
+    align-items: center; /* Alinha os itens no centro */
   }
 
   .foto-perfil {
-    width: 150px;
-    /* Diminui o tamanho da foto */
-    height: 150px;
-    /* Diminui o tamanho da foto */
-    margin-bottom: 2rem;
-    /* Adiciona espaço abaixo da foto */
+    width: 150px; /* Diminui o tamanho da foto */
+    height: 150px; /* Diminui o tamanho da foto */
+    margin-bottom: 2rem; /* Adiciona espaço abaixo da foto */
   }
 }
