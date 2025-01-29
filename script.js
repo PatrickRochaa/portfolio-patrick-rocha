@@ -1,3 +1,4 @@
+
 // Aguarda o carregamento do DOM antes de executar a função
 document.addEventListener("DOMContentLoaded", () => {
   showSection("sobre"); // Exibe a seção "sobre" por padrão ao carregar a página
