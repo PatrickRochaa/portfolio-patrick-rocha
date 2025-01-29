@@ -12,7 +12,7 @@ footer {
   width: 100%; /* Garante que o footer ocupe toda a largura */
 }
 /* Linha decorativa no topo da seção (#footer) em diagonal */
-footer::before {
+footer::after {
   content: "";
   position: absolute; /* Posição absoluta em relação ao #sobre */
   top: 0; /* Fixado ao fundo */
