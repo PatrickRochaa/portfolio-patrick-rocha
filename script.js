@@ -34,7 +34,8 @@ function showSection(sectionId) {
 
   // Seleciona o link correspondente à seção exibida
   const activeLink = document.querySelector(`nav a[href="#${sectionId}"]`);
-  
+
+   
   // Se o link correspondente existir, adiciona a classe "active" para destacá-lo
   if (activeLink) {
     activeLink.classList.add("active");

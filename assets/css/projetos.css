@@ -3,30 +3,13 @@
   padding: 2rem;
   max-width: 990px;
   margin: 0 auto;
-  position: relative; /* Para permitir o uso de pseudo-elementos */
-}
-
-/* Linha decorativa no topo da seção (#projetos) em diagonal */
-#projetos::after {
-  content: "";
-  position: absolute; /* Posição absoluta em relação ao #sobre */
-  top: 0; /* Fixado ao fundo */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta o alinhamento central */
-  width: 80%; /* Largura ajustável da linha */
-  height: 2px; /* Espessura da linha */
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    var(--orange-yellow-crayola),
-    rgba(255, 255, 255, 0)
-  ); /* Gradiente suave com transparência nas bordas */
 }
 
 /* Mobile First */
 .containerProjetos {
   display: grid;
-  grid-template-columns: 1fr; /* Exibe um item por linha por padrão */
+  grid-template-columns: 1fr;
+  /* Exibe um item por linha por padrão */
   gap: 2rem;
 }
 
@@ -38,23 +21,31 @@
 }
 
 .projeto {
-  position: relative; /* Necessário para o posicionamento do overlay */
-  overflow: hidden; /* Garante que o overlay não ultrapasse os limites do container */
-  border-radius: 8px; /* Aplica bordas arredondadas ao projeto */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra padrão */
-  transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+  position: relative;
+  /* Necessário para o posicionamento do overlay */
+  overflow: hidden;
+  /* Garante que o overlay não ultrapasse os limites do container */
+  border-radius: 8px;
+  /* Aplica bordas arredondadas ao projeto */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra padrão */
+  transition: box-shadow 0.3s ease;
+  /* Transição suave para a sombra */
 }
 
 .projeto:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /* Aumenta a sombra ao passar o mouse */
 }
 
 .projeto img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 8px; /* Mantém o mesmo arredondamento */
-  transition: transform 0.3s ease; /* Suaviza o efeito de zoom */
+  border-radius: 8px;
+  /* Mantém o mesmo arredondamento */
+  transition: transform 0.3s ease;
+  /* Suaviza o efeito de zoom */
 }
 
 /* Estilo do overlay */
@@ -68,25 +59,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.9
-  ); /* Torna o fundo do overlay mais escuro e opaco */
-  color: var(--white-1); /* Cor mais clara para o texto */
+  background-color: rgba(0,
+      0,
+      0,
+      0.9);
+  /* Torna o fundo do overlay mais escuro e opaco */
+  color: var(--white-1);
+  /* Cor mais clara para o texto */
   opacity: 0;
   transition: opacity 0.3s ease;
-  padding: 1.5rem; /* Aumenta o padding para melhorar o espaçamento */
+  padding: 1.5rem;
+  /* Aumenta o padding para melhorar o espaçamento */
   border-radius: 8px;
 }
 
 .projeto:hover .overlay {
-  opacity: 1; /* Mostra o overlay ao passar o mouse */
+  opacity: 1;
+  /* Mostra o overlay ao passar o mouse */
 }
 
 .projeto:hover img {
-  transform: scale(1.05); /* Efeito de zoom na imagem */
+  transform: scale(1.05);
+  /* Efeito de zoom na imagem */
 }
 
 .projeto h3 {
@@ -100,22 +94,31 @@
 
 /* Estilo para o texto dentro do overlay */
 .projeto p {
-  font-size: 1.4rem; /* Tamanho de texto mais legível */
-  color: var(--white-1); /* Cor clara para melhor contraste */
-  text-align: justify; /* Justifica o texto para uma aparência limpa */
-  margin-bottom: 1.5rem; /* Maior espaçamento abaixo do texto */
-  line-height: 1.8; /* Aumenta o espaçamento entre linhas */
+  font-size: 1.4rem;
+  /* Tamanho de texto mais legível */
+  color: var(--white-1);
+  /* Cor clara para melhor contraste */
+  text-align: justify;
+  /* Justifica o texto para uma aparência limpa */
+  margin-bottom: 1.5rem;
+  /* Maior espaçamento abaixo do texto */
+  line-height: 1.8;
+  /* Aumenta o espaçamento entre linhas */
 }
 
 /* Estilo do botão dentro do overlay */
 .projeto .button {
   display: inline-block;
-  padding: 1rem 2rem; /* Aumenta o padding para melhor usabilidade */
-  font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+  padding: 1rem 2rem;
+  /* Aumenta o padding para melhor usabilidade */
+  font-size: 1.2rem;
+  /* Ajusta o tamanho da fonte */
   font-weight: bold;
   text-transform: uppercase;
-  color: var(--jet); /* Cor escura para o texto */
-  background: var(--orange-yellow-crayola); /* Fundo com destaque */
+  color: var(--jet);
+  /* Cor escura para o texto */
+  background: var(--orange-yellow-crayola);
+  /* Fundo com destaque */
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -123,8 +126,10 @@
 
 /* Efeito de hover para o botão */
 .projeto .button:hover {
-  background: var(--vegas-gold); /* Cor mais clara ao passar o mouse */
-  transform: translateY(-3px); /* Leve elevação */
+  background: var(--vegas-gold);
+  /* Cor mais clara ao passar o mouse */
+  transform: translateY(-3px);
+  /* Leve elevação */
 }
 
 /* Estilos para tablets e telas maiores */
@@ -132,10 +137,9 @@
 /* Para telas entre 700px e 1024px (tablets) */
 @media (min-width: 700px) {
   .containerProjetos {
-    grid-template-columns: repeat(
-      2,
-      minmax(250px, 1fr)
-    ); /* Exibe dois itens por linha */
+    grid-template-columns: repeat(2,
+        minmax(250px, 1fr));
+    /* Exibe dois itens por linha */
   }
 
   #projetos h2 {
@@ -150,10 +154,9 @@
 /* Para telas maiores que 1024px (desktops) */
 @media (min-width: 1024px) {
   .containerProjetos {
-    grid-template-columns: repeat(
-      3,
-      minmax(320px, 1fr)
-    ); /* Exibe três itens por linha */
+    grid-template-columns: repeat(3,
+        minmax(320px, 1fr));
+    /* Exibe três itens por linha */
   }
 
   #projetos h2 {
@@ -164,12 +167,16 @@
 /* Ajustes responsivos para telas menores */
 @media (max-width: 768px) {
   .projeto p {
-    font-size: 1.2rem; /* Reduz o tamanho do texto */
-    line-height: 1.6; /* Ajusta o espaçamento entre linhas */
+    font-size: 1.2rem;
+    /* Reduz o tamanho do texto */
+    line-height: 1.6;
+    /* Ajusta o espaçamento entre linhas */
   }
 
   .projeto .button {
-    padding: 0.8rem 1.5rem; /* Ajusta o padding do botão */
-    font-size: 1rem; /* Reduz o tamanho da fonte */
+    padding: 0.8rem 1.5rem;
+    /* Ajusta o padding do botão */
+    font-size: 1rem;
+    /* Reduz o tamanho da fonte */
   }
 }
