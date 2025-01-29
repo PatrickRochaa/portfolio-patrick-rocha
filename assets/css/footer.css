@@ -55,7 +55,7 @@ footer .title {
   font-size: 1.5rem; /* Tamanho da fonte do título */
   font-weight: bold; /* Deixa o título em negrito */
   margin-bottom: 1.5rem; /* Espaçamento abaixo do título */
-  color: var(--orange-yellow-crayola); /* Cor do título */
+  color: var(--white-1); /* Muda o texto do parágrafo para branco */
 }
 
 /* Estilos para os ícones de redes sociais */
@@ -67,7 +67,7 @@ footer .social {
 
 footer .social a {
   display: inline-block; /* Garante que o link seja exibido como um bloco em linha */
-  border: 1px solid var(--orange-yellow-crayola);
+  border: 1px solid var(--white-1); /* Muda a borda dos ícones para dourado */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -78,8 +78,30 @@ footer .social img {
   width: 30px; /* Define o tamanho dos ícones */
   height: 30px; /* Define a altura dos ícones */
   transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+  filter: brightness(0) invert(1); /* Deixa os ícones brancos */
 }
 
 footer .social a:hover {
   transform: scale(1.1); /* Aumenta o tamanho dos ícones ao passar o mouse */
+}
+
+@media (max-width: 600px) {
+  footer .title {
+    font-size: 1rem; /* Reduz o tamanho da fonte */
+    max-width: 80%; /* Limita a largura para evitar quebras feias */
+    margin: 0 auto 1rem; /* Centraliza e ajusta o espaçamento */
+  }
+
+  footer .social {
+    gap: 1rem; /* Diminui o espaçamento entre os ícones */
+  }
+
+  footer .social img {
+    width: 25px; /* Reduz o tamanho dos ícones */
+    height: 25px;
+  }
+
+  footer .social a {
+    padding: 6px; /* Ajuste no padding para manter o equilíbrio */
+  }
 }
