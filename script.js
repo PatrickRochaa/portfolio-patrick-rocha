@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // Exibe a seção "sobre" ao carregar a página
+  showSection("sobre");
+});
+
 function showSection(sectionId) {
   const sections = document.querySelectorAll('section'); // Seleciona todas as seções
   sections.forEach(section => {
