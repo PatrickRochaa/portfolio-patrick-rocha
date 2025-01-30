@@ -2,7 +2,7 @@
 #projetos {
   padding: 2rem;
   max-width: 990px;
-  margin: 0 auto;
+  margin-top: -10px;
   position: relative; /* Para permitir o uso de pseudo-elementos */
 }
 
@@ -11,6 +11,23 @@
   content: "";
   position: absolute; /* Posição absoluta em relação ao #sobre */
   top: 0; /* Fixado ao fundo */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta o alinhamento central */
+  width: 80%; /* Largura ajustável da linha */
+  height: 2px; /* Espessura da linha */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--orange-yellow-crayola),
+    rgba(255, 255, 255, 0)
+  ); /* Gradiente suave com transparência nas bordas */
+}
+
+/* Linha decorativa no topo da seção (#projetos) em diagonal */
+#projetos::before {
+  content: "";
+  position: absolute; /* Posição absoluta em relação ao #sobre */
+  bottom: 0; /* Fixado ao fundo */
   left: 50%; /* Centraliza horizontalmente */
   transform: translateX(-50%); /* Ajusta o alinhamento central */
   width: 80%; /* Largura ajustável da linha */

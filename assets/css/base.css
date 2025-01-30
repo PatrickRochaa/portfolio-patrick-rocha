@@ -57,11 +57,21 @@ a {
   display: none; /* Inicialmente ocultar todas as seções */
   width: 100%;
   padding: 20px;
+  opacity: 0; /* Começa invisível */
+  transform: translateY(20px); /* Começa deslocada para baixo */
+  transition: opacity 1s ease, transform 1s ease; /* Transição suave */
+}
+
+/* Quando a seção for exibida, ela ficará visível */
+section.show {
+  opacity: 1;
+  transform: translateY(0); /* Volta para a posição original */
 }
 
 /* Mostrar a seção ativa */
 .section.active {
   display: block;
+  opacity: 1; /* Torna a seção visível */
 }
 
 h2 {
