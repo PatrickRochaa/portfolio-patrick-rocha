@@ -8,6 +8,7 @@
   --orange-yellow-crayola: hsl(45, 100%, 72%);
   --vegas-gold: hsl(45, 54%, 58%);
   --light-gray: hsl(0, 0%, 84%);
+
   /* Gradiente para ser usado em before H1 */
   --gradiente-ouro: linear-gradient(
     45deg,
@@ -17,11 +18,11 @@
 
   /* Gradiente para ser usado em before H2 */
   --vermelho-destaque: linear-gradient(135deg, #ff5733, #f44336, #d32f2f);
-  /* Gradiente do vermelho */
-  /* Cor vermelha para o detalhe */
 }
 
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -33,7 +34,6 @@ body {
   background: var(--smoky-black);
   line-height: 1.8;
   padding: 10px 0px;
-  scroll-behavior: smooth;
 }
 
 html {
@@ -41,29 +41,27 @@ html {
   font-size: 62.5%;
 }
 
+/*classe que limita o tamanho de todo o conteudo*/
 .container {
   width: 100%;
   max-width: 990px;
-  margin: auto;
+  margin: 10px auto;
 }
 
 a {
   text-decoration: none;
 }
 
-section {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* Esconde todas as seções com efeito de opacidade */
+/* Estilo das seções para manter a largura e o alinhamento */
+.section {
+  display: none; /* Inicialmente ocultar todas as seções */
+  width: 100%;
+  padding: 20px;
 }
 
-section:target {
+/* Mostrar a seção ativa */
+.section.active {
   display: block;
-  opacity: 1; /* Exibe a seção quando o link de navegação for clicado com efeito de opacidade */
-}
-
-section {
-  transition: opacity 0.5s ease-in-out; /* Transição suave para opacidade */
 }
 
 h2 {
@@ -82,4 +80,10 @@ h2::before {
   left: -10px; /* Ajuste a posição da linha */
   top: 50%; /* Alinha a linha ao centro do h2 */
   transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+}
+
+/* Estilo para o main */
+main {
+  display: block;
+  width: 100%;
 }

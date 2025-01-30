@@ -1,4 +1,3 @@
-
 // Aguarda o carregamento do DOM antes de executar a função
 document.addEventListener("DOMContentLoaded", () => {
   showSection("sobre"); // Exibe a seção "sobre" por padrão ao carregar a página
@@ -15,21 +14,25 @@ function showSection(sectionId) {
   });
 
   // Obtém a seção correspondente ao ID passado como argumento
-  const sectionToShow = document.getElementById(sectionId);
+  const sectionToShow = document.querySelector(`section#${sectionId}`);
 
   // Torna a seção visível alterando o display para "block"
-  sectionToShow.style.display = "block";
+  if (sectionToShow) {
+    sectionToShow.style.display = "block";
 
-  // Pequeno atraso para garantir que a transição de opacidade ocorra corretamente
-  setTimeout(() => {
-    sectionToShow.style.opacity = 1;
-  }, 10);
+    // Pequeno atraso para garantir que a transição de opacidade ocorra corretamente
+    setTimeout(() => {
+      sectionToShow.style.opacity = 1;
+    }, 10);
+  }
 
   // Atualiza os links do menu para destacar o ativo
   const navLinks = document.querySelectorAll("nav a");
 
   // Remove a classe "active" de todos os links do menu
-  navLinks.forEach((link) => { link.classList.remove("active"); });
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
 
   // Seleciona o link correspondente à seção exibida
   const activeLink = document.querySelector(`nav a[href="#${sectionId}"]`);

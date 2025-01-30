@@ -2,7 +2,7 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Garante que o logo fique à esquerda e o menu à direita */
+  justify-content: space-between;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.7),
@@ -31,7 +31,7 @@ header::after {
   );
 }
 
-/* Linha decorativa no rodapé da seção  */
+/* Linha decorativa no rodapé da seção */
 header::before {
   content: "";
   position: absolute;

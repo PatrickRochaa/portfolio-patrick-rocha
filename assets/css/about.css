@@ -1,6 +1,5 @@
 /* Seção Sobre Mim */
 #sobre {
-  margin-top: 18px; /* Adiciona um espaçamento no topo da seção */
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.7),
@@ -32,8 +31,7 @@
     rgba(255, 255, 255, 0),
     var(--orange-yellow-crayola),
     rgba(255, 255, 255, 0)
-  );
-  /* Cor e efeito da linha */
+  ); /* Cor e efeito da linha */
 }
 
 /* Linha decorativa no rodapé da seção (#sobre) em diagonal */
@@ -50,8 +48,7 @@
     rgba(255, 255, 255, 0),
     var(--orange-yellow-crayola),
     rgba(255, 255, 255, 0)
-  );
-  /* Cor e efeito da linha */
+  ); /* Cor e efeito da linha */
 }
 
 /* Detalhe com imagem no ::before */
@@ -165,7 +162,7 @@
 /* Responsividade */
 @media (min-width: 700px) {
   #sobre {
-    padding: 6rem 4rem; /* Aumenta o espaçamento interno em telas maiores */
+    padding: 5rem 4rem; /* Aumenta o espaçamento interno em telas maiores */
   }
 
   .containerSobre {
@@ -196,8 +193,10 @@
 
 @media (max-width: 699px) {
   .containerSobre {
-    flex-direction: column; /* Organiza os itens na direção vertical */
-    align-items: center; /* Alinha os itens no centro */
+    flex-direction: column;
+    /* Organiza os itens na direção vertical */
+    align-items: center;
+    /* Alinha os itens no centro */
   }
 
   .foto-perfil {
